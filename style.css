@@ -1,0 +1,157 @@
+html, body{
+    background-color:lightgray; /* pozadinska boja celog veb sajta*/
+    margin:0; /*margine za ceo sajt su 0px; veb stranica sama po sebi ima marginu koju je najcesce
+                potrebno obrisati*/
+    scroll-behavior: smooth; /* dodato zbog btt dugmeta; sluzi da bi svaka tranzicija izmedju linkova 
+                                na ovoj stranici bila glatka */
+}
+nav{
+    background-color:rgba(255,255,255,0.7); /* pozadinska boja navigacionog menija */
+    padding:5px 0px; /* unutrasnji razmak navigacionog menija */
+    position:absolute; /* apsolutno pozicioniranje navigacionog menija bez koordinata
+                            jer one u ovom slucaju nisu potrebne */
+    width:100%;
+}
+ul{
+    float:right; /* ubaceno da bi se cela lista pomerila u desnu stranicu unutar navigacionog menija */
+    text-align:center; /* centriranje liste navigacionog menija */
+}
+li{
+    display:inline; /* elementi liste se redjaju jedan za drugim */
+    font-size:20px; /* velicina fonta elemenata liste je 20 piksela */
+    font-weight:bold; /* podebljan font elemenata liste */
+    letter-spacing:2px; /* razmak izmedju karaktera tj. slova */
+    padding:0px 20px; /* gornji i donji razmak su 0px, a levi i desni po 20px */
+    color:white; /* boja teksta unutar liste */
+}
+a{
+    text-decoration:none; /* brisanje default linije ispod linkova */
+    color:black;
+}
+.main{ /* klasa ubacena da bi se ogranicili svi elementi koje cemo ubacivati na sajt */
+    width:80%; /* sirina bloka u koji ubacujemo elemente */
+    margin-left:auto; /* leva i desna margina su auto da bi se taj blok centrirao na sredinu veb sajta */
+    margin-right:auto;
+    padding:2% 0; /* unutrasnji razmak bloka je 2% sa gornje i donje strane, a sa 0 sa leve i desne */
+}
+.sekcija{
+    background:rgba(255,255,255,0.8); /* pozadinska boja sekcije */
+    padding:1% 5%; /* unutrasnji razmak sekcije */
+    border-radius:10px; /* zaobljeni coskovi sekcije */
+    margin:10px 0px; /* spoljasnji razmak svake sekcije je 10px sa gornje i donje strane */
+    border:1px solid gray; /* ivica sekcije debljine 1px; solid - puna linija, dashed - isprekidana linija, dotted - tackasta linija */
+    padding:30px; /* unutrasnji razmak sekcije sa sve 4 strane je 30px */
+    text-align:justify; /* tekst unutar sekcije je poravnat sa obe strane */
+    line-height:30px; /* razmak izmedju redova paragrafa */
+}
+span{
+    font-weight:bold; /* podebljanje teksta */
+    font-style:italic; /* nakrivljen tekst */
+    color:red; /* boja teksta */
+}
+#linija{ /* id ubacen da bi se modifikovala linija ( hr ) */
+    height:2px; /* debljina hr se menja pomocu visine */
+    background-color:black; /* boja linije */
+    width:20%; /* sirina linije */
+    margin-left:0px; /* leva margina 0px, sto znaci da je linija od leve stranice sekcije udaljena 0px */
+}
+.zaposleni-wrap{ /* klasa dodata da bi se objedinila 3 diva pozvana unutar njega */
+    text-align:center; /* centriranje elemenata */
+}
+.zaposleni{
+    display:inline-block; /* elementi sa tim nazivom klase se redjaju jedan za drugim */
+    width:30%; /* sirina jednog bloka je 30% */
+    background:lightgray; /* pozadinska boja jednog bloka */
+    padding:10px; /* unutrasnji razmak sa sve 4 strane je 10px */
+}
+.slika{
+    width:100px; /* sirina i visina slike */
+    height:100px;
+    border-radius:50%; /* zaobljenost coskova slike; posto su slike kvadrati, a zaobljenost 50%, te slike se pretvaraju u krug */
+}
+footer{
+    background-color:black; /* pozadinska boja footera */
+    padding:5px 0px; /* unutrasnji razmak footera */
+    text-align:center; /* centriranje teksta unutar footera */ 
+    font-weight:bold; /* podebljanje teksta */
+    color:white; /* boja teksta */
+    letter-spacing:2px; /* razmak izmedju slova tj. karaktera */
+}
+.header{
+    background:url(img/header.jpeg) center fixed; /* pozadinska slika */
+    background-size:100% 100%; /* velicina pozadinske slike */
+    padding:200px 100px;
+    text-align:center; /* pozicioniranje teksta unutar header klase */
+}
+.wrap{
+    display:block; /* centriranje bloka elemenata unutar headera */
+    margin-left:auto;   
+    margin-right:auto;  
+    padding:50px;
+    width:50%;
+    background-color:rgba(255,255,255,0.7); /* pozadinska boja predstavljena preko rgba */
+    margin-bottom:50px; /* donja margina bloka */
+}
+hr{ /* stilizovanje horizontalne linije */
+    width:30%;
+    height:3px;
+    background-color:red;
+    border:none;
+}
+.button{ /* stilizovanje crvenog dugmeta */
+    color:white;
+    letter-spacing:2px;
+    font-weight:bold;
+    background-color:red;
+    padding:15px 30px;
+}
+.button:hover{ /* atributi koji se primenjuju nakon prelaska misem preko crvenog dugmeta */
+    transition:0.5s ease; /* atribut za duzinu tranzicije atributa nakon prelaska misem */
+    padding:20px 35px;
+    background-color:rgba(255,0,0,.3);
+}
+.sek2{
+    background:url(img/back.jpeg) center fixed;
+    background-size:100% 100%;
+}
+.btt{ /* back to top dugme */
+    color:white;
+    background-color:red;
+    padding:10px 25px;
+    margin-right:20px;
+    float:right;
+    font-weight:100; /* u footeru je stavljen font-weight:bold; te je tekst unutar ovog dugmeta
+                        po defaultu podebljan; pomocu vrednosti 100 smo smanjili podebljanje
+                        na normalnu debljinu */
+}
+/* drugi nacin za dodavanje btt dugmeta // slobodno isprobajte i ovu varijantu 
+.btt{
+    position:fixed; // fiksirana pozicija - element se uvek nalazi na tom mestu koje mu je
+                        odredjeno pomocu koordinara //
+    bottom:20px; // koordinate dodate da bi btt dugme bilo fiksirano za dno stranice
+    right:20px;
+    background-color:red;
+    padding:10px 25px;
+}*/
+.btt:hover{ /* atributi koji se primenjuju na btt dugme nakon prelaska misem */
+    transition:0.5s ease;
+    background-color:rgba(255,0,0,.3);
+}
+/* 
+///////////////NAPOMENA/////////////// 
+Klase i atributi koji su dodati ove nedelje kao materijal nisu samo od 80te linije koda
+vec su atributi dodati i medju elemente od prosle nedelje, tako da obratite paznju i 
+na elemente od prosle nedelje.
+Postoje neki atributi koji nisu spomenuti ove nedelje, a dodati su radi estetike stranice
+(transition, scroll-behavior)
+
+PREPORUKA 
+Najlaksi nacin provere CSSa i samih izmena na stranici, mozete postici ulazenjem u
+Inspect element ( desni klik na odredjeni element na veb stranici -> Inspect (Chrome), 
+Inspect Element (Mozzila), gde mozete direktno da menjate svojsta elemenata i da proverite kako
+ce se ti elementi ponasati sa drugim vrednostima. Te proverene vrednosti zatim morate 
+da promenite u kodu kada budete sigurni da svojsta sa novim vrednostima rade onako
+kako ste vi to zamislili, tako da smatrajte Inspect element svojim jako dobrim prijateljem.
+
+Za sva dodatna pitanja kontaktirajte me preko mejla : opalic@vtsns.edu.rs 
+*/
